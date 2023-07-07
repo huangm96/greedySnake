@@ -1,0 +1,93 @@
+
+
+body {
+    min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; 
+}
+#main{
+    box-sizing: border-box;
+    width:260px;
+    height:420px;
+    border:5px solid black;
+    border-radius:20px;
+    background-color: rgb(105, 215, 105);
+    padding: 24px;
+    
+    #screen{
+        width:200px;
+        height: 300px;
+        border:2px solid black;
+        position: relative;
+
+        #snake{
+            div{
+                box-sizing: border-box;
+                width:10px;
+                height:10px;
+                background-color:black;
+                border:1px solid rgb(105, 215, 105);
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+        }
+
+        #food{
+            width:10px;
+            height:10px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            div{
+                width: 4px;
+                height: 4px;
+                background-color: black;
+                transform: rotate(45deg);
+            }
+        }
+    
+    }
+    #scorePanel{
+        display: flex;
+        justify-content: space-between;
+        font-size:20px;
+        p{
+            
+            font-weight: bold;
+        }
+    }
+}
+#btn-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #btn-row{
+        display: flex;
+    }
+    .btn{
+        width:50px;
+        height:50px;
+        margin:10px;
+        border:3px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:30px;
+        font-weight: bold;
+        box-shadow: 3px 2px 2px lightslategray;
+        transition: all 0.2s linear ;
+        &:hover{
+            background-color:lightgrey;
+            box-shadow: none;
+            cursor: pointer;
+        }
+
+        
+    }
+}
