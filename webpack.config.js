@@ -56,5 +56,8 @@ module.exports = {
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
     new CssMinimizerPlugin(),
   ],
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
   mode: "production",
 };
