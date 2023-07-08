@@ -25,10 +25,10 @@ class GameControl{
         this.btns.addEventListener("click", this.clickHandler.bind(this))
         this.btna.addEventListener("click", this.clickHandler.bind(this))
         this.btnd.addEventListener("click", this.clickHandler.bind(this))
-        this.btnw.addEventListener("touchstart", this.touchHandler.bind(this))
-        this.btns.addEventListener("touchstart", this.touchHandler.bind(this))
-        this.btna.addEventListener("touchstart", this.touchHandler.bind(this))
-        this.btnd.addEventListener("touchstart", this.touchHandler.bind(this))
+        // this.btnw.addEventListener("touchstart", this.touchHandler.bind(this))
+        // this.btns.addEventListener("touchstart", this.touchHandler.bind(this))
+        // this.btna.addEventListener("touchstart", this.touchHandler.bind(this))
+        // this.btnd.addEventListener("touchstart", this.touchHandler.bind(this))
         this.food.change()
         this.run()
     }
@@ -48,22 +48,22 @@ class GameControl{
         
         
     }
-    touchHandler(event: TouchEvent) {
-        console.log((event.currentTarget as HTMLElement).id)
-        const id = ((event.currentTarget as HTMLElement).id).at(-1) as string
-        if (id === "w" && this.direction === "s") {
-            return
-        }else if (id === "s" && this.direction === "w") {
-            return
-        }
-        else if (id === "a" && this.direction === "d") {
-            return
-        }
-        else if (id === "d" && this.direction === "a") {
-            return
-        }
-           this.direction = id
-    }
+    // touchHandler(event: TouchEvent) {
+    //     console.log((event.currentTarget as HTMLElement).id)
+    //     const id = ((event.currentTarget as HTMLElement).id).at(-1) as string
+    //     if (id === "w" && this.direction === "s") {
+    //         return
+    //     }else if (id === "s" && this.direction === "w") {
+    //         return
+    //     }
+    //     else if (id === "a" && this.direction === "d") {
+    //         return
+    //     }
+    //     else if (id === "d" && this.direction === "a") {
+    //         return
+    //     }
+    //        this.direction = id
+    // }
     clickHandler(event: MouseEvent) {
         const id = ((event.currentTarget as HTMLElement).id).at(-1) as string
         if (id === "w" && this.direction === "s") {

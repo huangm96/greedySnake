@@ -32,13 +32,22 @@ class Snake{
         this.checkHitBody()
     }
     move(X: number, Y: number) {
-        if (X < 0 || X > 190) {
-            throw new Error("Hit wall!")
+        // if (X < 0 || X > 190) {
+        //     throw new Error("Hit wall!")
+        // }
+        // if (Y < 0 || Y > 290) {
+        //     throw new Error("Hit wall!")
+        // }
+        if (X > 190) {
+            X =0
+        } else if (X < 0) {
+            X = 190
         }
-        if (Y < 0 || Y > 290) {
-            throw new Error("Hit wall!")
+        if (Y > 290){
+           Y =0
+        } else if (Y < 0) {
+            Y = 290
         }
-        
         
         this.X = X
         this.Y = Y
