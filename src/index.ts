@@ -1,11 +1,4 @@
 import "./style.scss";
-import Food from "./modules/Food"
-import Snake from "./modules/Snake"
+import GameControl from "./modules/GameControl"
 
-const food = new Food();
-food.change()
-console.log(food.X, food.Y)
-
-const s = new Snake();
-s.addBody()
-s.addBody()
+new GameControl()
