@@ -25,6 +25,7 @@ class GameControl{
         this.btns.addEventListener("click", this.clickHandler.bind(this))
         this.btna.addEventListener("click", this.clickHandler.bind(this))
         this.btnd.addEventListener("click", this.clickHandler.bind(this))
+        this.food.change()
         this.run()
     }
     keydownHandler(event: KeyboardEvent) {
