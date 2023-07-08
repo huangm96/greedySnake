@@ -6,7 +6,7 @@ class GameControl{
     food: Food
     snake: Snake
     scorePanel: ScorePanel
-    direction = ""
+    direction = "d"
     isLive=true
 
     btnw = document.getElementById("btn-w") !
